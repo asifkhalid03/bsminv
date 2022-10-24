@@ -26,9 +26,16 @@ class Company_Profile_Seeder extends Seeder
            'page' => 'company-profile'
         ];
 
+        $data2 = [
+            'lang' => 'chi',
+            'data' =>   json_encode($temp_content),
+            'page' => 'company-profile'
+        ];
+
 
 
         ContentManager::create($data);
+        ContentManager::create($data2);
 
     }
 }
