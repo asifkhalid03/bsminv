@@ -1,0 +1,168 @@
+
+.body {
+    font-family: Guardian TextSans Web, sans-serif;
+}
+
+.aumChartWrap {
+    text-align: center;
+}
+
+.aumChart {
+    max-width: 300px;
+    margin-left: -15px;
+}
+
+@media (max-width: 1199px) and (min-width: 992px) {
+    .aumChart {
+        max-width: 230px;
+    }
+}
+
+.aumFoot {
+    text-align: right;
+}
+
+.aumChart .connector {
+    fill: #707171;
+}
+
+.aumChart text {
+    font-family: Sanomat Web, serif;
+    font-size: 19px;
+}
+
+.aumChart #center-box text {
+    fill: #FFFFFF;
+}
+
+.aumChart .boxTitle {
+    font-size: 26px !important;
+}
+
+.aumChart .numBack {
+    opacity: 0.4;
+    fill: #FFFFFF;
+}
+
+.aumChart .num {
+    font-family: Guardian TextSans Web, sans-serif !important;
+    opacity: 0;
+    transition: all 1s ease;
+    transition-delay: 0.5s,
+    font-weight: 400;
+}
+
+.aumChart #branchs > g {
+    transition: all 1s ease;
+    transition-delay: 1.5s;
+}
+
+@media (max-width: 991px) {
+    .aumChartWrap {
+        margin-bottom: 30px;
+    }
+
+    .aumFoot {
+        text-align: center;
+    }
+}
+
+.aumChart .chart1Color {
+    fill: #1B5E5C;
+}
+
+.aumChart .chart2Color {
+    fill: #4C9F8B;
+}
+
+.aumChart .chart3Color {
+    fill: #C39D78;
+}
+
+.aumChart .chart4Color {
+    fill: #006492;
+}
+
+.aumChart.on .num {
+    opacity: 1;
+}
+
+.aumChart.on #branchs > g {
+    transform: translate(0, 0);
+}
+
+.aumChart2.on #branch5 .connector {
+    transform: translate(0%, 0%);
+    transition-delay: 1.8s;
+}
+
+.aumChart1 #branch1 {
+    transform: translate(10%, 20%);
+}
+
+.aumChart1 #branch2 {
+    transform: translate(-10%, 20%);
+}
+
+.aumChart1 #branch3 {
+    transform: translate(0%, -30%);
+}
+
+.aumChart2 #branch1 {
+    transform: translate(18%, 20%);
+}
+
+.aumChart2 #branch2 {
+    transform: translate(-20%, 20%);
+}
+
+.aumChart2 #branch3 {
+    transform: translate(19%, -30%);
+}
+
+.aumChart2 #branch4 {
+    transform: translate(-22%, -30%);
+}
+
+.aumChart2 #branch5 {
+    transform: translate(0%, -45%);
+}
+
+.aumChart2 #branch5 .connector {
+    transform: translate(0%, 10%);
+}
+
+.aumChart3 #branch1 {
+    transform: translate(20%, 22%);
+}
+
+.aumChart3 #branch2 {
+    transform: translate(-21%, 22%);
+}
+
+.aumChart3 #branch3 {
+    transform: translate(0%, -30%);
+}
+
+.aumChart4 #branch1 {
+    transform: translate(20%, 22%);
+}
+
+.aumChart4 #branch2 {
+    transform: translate(-19%, 22%);
+}
+
+/*我们的商业概览右侧 背景图像*/
+.overview-bg-img {
+    /*background-image: url("images/the-firm-wwd-gi-657862220.jpg-sfvrsn=96c9bfad_2.jpg") ;*/
+    background-image: /*savepage-url=images/201109152510.jpg*/ var(--savepage-url-18);
+}
+
+/*我们的运营右侧的   背景图像  这个就是刚刚演示改的图片，为什么命名为Yuming.jpg  就是因为这里写的 是 Yunying.jpg*/
+.overview-bg-img2 {
+    background-image: /*savepage-url=images/the-firm-wwd-gi-657862220.jpg-sfvrsn=96c9bfad_2.jpg*/ var(--savepage-url-19);
+}
+
+.aumChart4 #branch3 {
+    transform: translate(0%, -30%);
+}

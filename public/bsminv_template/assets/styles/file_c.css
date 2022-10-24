@@ -1,0 +1,33 @@
+@font-face{
+    font-family:"Calibri W01";
+    src:/*savepage-url=../fonts/d4acc8cd-67f2-4139-80be-d669bb2564d7.eot-#iefix*/url()/*tpa=https://china.blackstone.com/assets/fonts/d4acc8cd-67f2-4139-80be-d669bb2564d7.eot?#iefix*/;
+    src:/*savepage-url=../fonts/d4acc8cd-67f2-4139-80be-d669bb2564d7.eot-#iefix*/url()/*tpa=https://china.blackstone.com/assets/fonts/d4acc8cd-67f2-4139-80be-d669bb2564d7.eot?#iefix*/ format("eot"),
+        /*savepage-url=../fonts/367341fc-4cc6-4a79-89ad-d6c61561611e.woff2*/url()/*tpa=https://china.blackstone.com/assets/fonts/367341fc-4cc6-4a79-89ad-d6c61561611e.woff2*/ format("woff2"),
+        /*savepage-url=../fonts/1ff86dd4-d3b2-4325-89bc-c6eb493cedba.woff*/url()/*tpa=https://china.blackstone.com/assets/fonts/1ff86dd4-d3b2-4325-89bc-c6eb493cedba.woff*/ format("woff"),
+        /*savepage-url=../fonts/aa6b4b64-5ce0-48fd-887a-bece037cd9c9.ttf*/url()/*tpa=https://china.blackstone.com/assets/fonts/aa6b4b64-5ce0-48fd-887a-bece037cd9c9.ttf*/ format("truetype");
+    font-weight:  400;
+    font-style:   normal;
+    font-stretch: normal;
+}
+@font-face{
+    font-family:"Calibri W01";
+    src:/*savepage-url=../fonts/26989e0d-2435-46c9-ab53-ae63e1816b99.eot-#iefix*/url()/*tpa=https://china.blackstone.com/assets/fonts/26989e0d-2435-46c9-ab53-ae63e1816b99.eot?#iefix*/;
+    src:/*savepage-url=../fonts/26989e0d-2435-46c9-ab53-ae63e1816b99.eot-#iefix*/url()/*tpa=https://china.blackstone.com/assets/fonts/26989e0d-2435-46c9-ab53-ae63e1816b99.eot?#iefix*/ format("eot"),
+        /*savepage-url=../fonts/3ded7064-503f-4fa0-853b-9f7a2cf55f20.woff2*/url()/*tpa=https://china.blackstone.com/assets/fonts/3ded7064-503f-4fa0-853b-9f7a2cf55f20.woff2*/ format("woff2"),
+        /*savepage-url=../fonts/4e7b2126-77d3-4e53-810d-7ccfde46450a.woff*/url()/*tpa=https://china.blackstone.com/assets/fonts/4e7b2126-77d3-4e53-810d-7ccfde46450a.woff*/ format("woff"),
+        /*savepage-url=../fonts/dcb27c78-fcd6-43bb-ab8b-9152bcfeb336.ttf*/url()/*tpa=https://china.blackstone.com/assets/fonts/dcb27c78-fcd6-43bb-ab8b-9152bcfeb336.ttf*/ format("truetype");
+    font-weight:  600;
+    font-style:   normal;
+    font-stretch: normal;
+}
+@font-face{
+    font-family:"Calibri W01";
+    src:/*savepage-url=../fonts/3bf8ead2-2902-446a-af57-fcf4e5da22db.eot-#iefix*/url()/*tpa=https://china.blackstone.com/assets/fonts/3bf8ead2-2902-446a-af57-fcf4e5da22db.eot?#iefix*/;
+    src:/*savepage-url=../fonts/3bf8ead2-2902-446a-af57-fcf4e5da22db.eot-#iefix*/url()/*tpa=https://china.blackstone.com/assets/fonts/3bf8ead2-2902-446a-af57-fcf4e5da22db.eot?#iefix*/ format("eot"),
+        /*savepage-url=../fonts/52f16f8c-2868-43ee-a2ca-378b097a3580.woff2*/url()/*tpa=https://china.blackstone.com/assets/fonts/52f16f8c-2868-43ee-a2ca-378b097a3580.woff2*/ format("woff2"),
+        /*savepage-url=../fonts/9cb02ba8-d928-43f5-a1bd-32fb78238194.woff*/url()/*tpa=https://china.blackstone.com/assets/fonts/9cb02ba8-d928-43f5-a1bd-32fb78238194.woff*/ format("woff"),
+        /*savepage-url=../fonts/1cc9eda5-6732-4a23-ad69-782421f8c81b.ttf*/url()/*tpa=https://china.blackstone.com/assets/fonts/1cc9eda5-6732-4a23-ad69-782421f8c81b.ttf*/ format("truetype");
+    font-weight:  100;
+    font-style:   normal;
+    font-stretch: normal;
+}
