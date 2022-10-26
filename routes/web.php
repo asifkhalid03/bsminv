@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ContentManagersController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -28,8 +29,13 @@ Route::group(['prefix' => ''],function(){
 
     Route::group(['prefix' => 'manage'],function(){
 
-        Route::get('company-profile/{lang?}',[\App\Http\Controllers\ContentManagersController::class,'CompanyProfile'])->name('manage.company-profile');
-        Route::post('{id}/updated',[\App\Http\Controllers\ContentManagersController::class,'Updated'])->name('manage.updated');
+        Route::get('company-profile/{lang?}',[ContentManagersController::class,'CompanyProfile'])->name('manage.company-profile');
+        Route::get('business-overview/{lang?}',[ContentManagersController::class,'BusinessOverview'])->name('manage.business.overview');
+        Route::get('our-operations/{lang?}',[ContentManagersController::class,'OurOperations'])->name('manage.our.operations');
+        Route::get('our-project/{lang?}/{id?}',[ContentManagersController::class,'OurProject'])->name('manage.our.project');
+        Route::get('our-project-deleted/{id}',[ContentManagersController::class,'OurProjectDeleted'])->name('manage.our.project.deleted');
+
+        Route::post('{id?}/updated',[ContentManagersController::class,'Updated'])->name('manage.updated');
 
     });
 

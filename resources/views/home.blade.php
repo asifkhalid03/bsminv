@@ -14,9 +14,9 @@
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Options <b class="caret"></b></a>
                                 <ul class="dropdown-menu" style="text-align: center">
                                     <li><a href="{{route('manage.company-profile')}}">Company Profile</a></li>
-                                    <li><a href="#">Business Overview</a></li>
-                                    <li><a href="#">Our Operation</a></li>
-                                    <li><a href="#">Our Project</a></li>
+                                    <li><a href="{{route('manage.business.overview')}}">Business Overview</a></li>
+                                    <li><a href="{{route('manage.our.operations')}}">Our Operation</a></li>
+                                    <li><a href="{{route('manage.our.project')}}">Our Project</a></li>
                                     <li><a href="#">Contact Us</a></li>
                                 </ul>
                             </li>
