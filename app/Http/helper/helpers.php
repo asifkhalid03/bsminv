@@ -10,7 +10,26 @@ use App\Models\User;
     {
        $temp_data =  ContentManager::where('lang', $lang)->where('page','company-profile')->first();
 
-        $data = json_decode($temp_data->data);
+        $data = [];
+        if(!empty($temp_data->data))
+        {
+            $data = json_decode($temp_data->data);
+        }
+
+        return $data;
+
+    }
+
+    function ContactUS($lang)
+    {
+        $temp_data =  ContentManager::where('lang', $lang)->where('page','contact-us')->first();
+
+        $data = [];
+        if(!empty($temp_data->data))
+        {
+            $data = json_decode($temp_data->data);
+        }
+
 
         return $data;
 
@@ -21,7 +40,13 @@ use App\Models\User;
     {
         $temp_data = ContentManager::where('lang', $lang)->where('page','business-overview')->first();
 
-        $data = json_decode($temp_data->data);
+
+        $data = [];
+        if(!empty($temp_data->data))
+        {
+            $data = json_decode($temp_data->data);
+        }
+
 
         return $data;
 
@@ -32,15 +57,21 @@ use App\Models\User;
     {
         $temp_data = ContentManager::where('lang', $lang)->where('page','our-operations')->first();
 
-        $data = json_decode($temp_data->data);
+
+        $data = [];
+        if(!empty($temp_data->data))
+        {
+            $data = json_decode($temp_data->data);
+        }
+
 
         return $data;
 
     }
 
-    function OurProject()
+    function OurProject($lang = "eng")
     {
-        return  Project::get()??[];
+        return  Project::where('lang', $lang)->get()??[];
 
     }
 

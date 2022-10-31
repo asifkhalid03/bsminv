@@ -95,10 +95,10 @@
 
         </div>
 
-        <input type="hidden" name="default_image" value="{{$data->image}}">
-        
+        <input type="hidden" name="default_image" value="{{$data->image??''}}">
+
         <div class="form-group col-lg-6">
-           <img src="{{asset('storage/images/'.$data->image)}}" width="400" height="400">
+           <img src="{{asset('storage/images')}}/{{$data->image??''}}" width="400" height="400">
 
         </div>
 

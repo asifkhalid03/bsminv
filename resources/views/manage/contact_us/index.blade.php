@@ -1,6 +1,6 @@
 @extends('manage.layouts.app')
 
-@section('title','Company Profile')
+@section('title','Business Overview')
 
 @push('head')
 
@@ -32,19 +32,17 @@
 
     <?php
 
-        $data = json_decode($our_operations->data);
-
-
+        $data = json_decode($contact_us->data);
 
     ?>
 
-    <h2>Our Operations</h2>
+    <h2>Contact Us Manage with Website Logo</h2>
 
-    <form action="{{route('manage.updated',$our_operations->id)}}" method="post"  enctype="multipart/form-data">
+    <form action="{{route('manage.updated',$contact_us->id)}}" method="post" enctype="multipart/form-data">
 
         @csrf
 
-        <input type="hidden" name="page" value="{{$our_operations->page}}">
+        <input type="hidden" name="page" value="{{$contact_us->page}}">
 
         <div class="col-lg-12">
 
@@ -65,52 +63,38 @@
 
 
         <div class="form-group">
-            <label for="title">Title 1:</label>
+            <label for="title">Footer Right Below:</label>
             <input type="text" class="form-control" id="title"  name="title[]" value="{{$data->title[0] ?? ""}}">
         </div>
 
 
         <div class="form-group">
-            <label for="content">Content 1:</label>
+            <label for="content">Left Side Footer Content:</label>
             <textarea id="content" name='content[]' required class="form-control wysiwyg-editor_1" >{{$data->content[0] ?? ""}}</textarea>
         </div>
 
-        <div class="form-group">
-            <label for="title">Title 2:</label>
-            <input type="text" class="form-control" id="title"  name="title[]" value="{{$data->title[1] ?? ""}}">
-        </div>
+
 
 
         <div class="form-group">
-            <label for="content">Content 2:</label>
+            <label for="content">Right Side Footer Content:</label>
             <textarea id="content" name='content[]' required class="form-control wysiwyg-editor_2" >{{$data->content[1] ?? ""}}</textarea>
         </div>
 
-        <div class="form-group">
-            <label for="title">Title 3:</label>
-            <input type="text" class="form-control" id="title"  name="title[]" value="{{$data->title[2] ?? ""}}">
-        </div>
-
-
-        <div class="form-group">
-            <label for="content">Content 3:</label>
-            <textarea id="content" name='content[]' required class="form-control wysiwyg-editor_3" >{{$data->content[2] ?? ""}}</textarea>
-        </div>
-
-
 
         <div class="form-group col-lg-6">
-            <label for="image">Section 1 Image:</label>
-            <input type="file" class="form-control" name="image_1" id="image">
+            <label for="image">Website Logo:</label>
+            <input type="file" class="form-control" name="image" id="image">
 
         </div>
 
-        <input type="hidden" name="default_image_1" value="{{$data->image_1 ?? ""}}">
+        <input type="hidden" name="default_image" value="{{$data->image??''}}">
 
         <div class="form-group col-lg-6">
-            <img src="{{asset('storage/images/')}}/{{$data->image_1 ?? ""}}" width="400" height="400">
+           <img src="{{asset('storage/images')}}/{{$data->image??''}}" width="400" height="400">
 
         </div>
+
 
 
 
@@ -140,7 +124,6 @@
 
         $('.wysiwyg-editor_1').wysiwygEditor();
         $('.wysiwyg-editor_2').wysiwygEditor();
-        $('.wysiwyg-editor_3').wysiwygEditor();
 
 
         var start = false;
@@ -150,13 +133,13 @@
             function ChangeLanguage(id)
             {
                 if( start === true) {
-                    location.replace("/manage/our-operations/" + $("#lang").val());
+                    location.replace("/manage/contact-us/" + $("#lang").val());
                 }
             }
 
 
 
-        $("#lang").val("{{$our_operations->lang}}").change();
+        $("#lang").val("{{$contact_us->lang}}").change();
 
         start = true;
 

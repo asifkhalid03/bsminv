@@ -17,7 +17,6 @@ class ContentManagersController extends Controller
         $company_profile = ContentManager::where('lang', $lang)->where('page','company-profile')->first();
 
 
-
         return view('manage.company_profile.index',compact('company_profile'));
 
     }
@@ -86,15 +85,19 @@ class ContentManagersController extends Controller
     }
 
 
+    public function ContactUs(Request $request, $lang = "eng")
+    {
+        $contact_us = ContentManager::where('lang', $lang)->where('page','contact-us')->first();
+
+
+        return view('manage.contact_us.index',compact('contact_us'));
+
+    }
+
+
 
     public function Updated(Request $request, $id)
     {
-
-
-
-
-
-
 //        company-profile updating
         if($request->page === "company-profile" )
         {
@@ -211,12 +214,8 @@ class ContentManagersController extends Controller
         elseif($request->page === "our-project" )
         {
 
-
-
             if($id==="0")
             {
-
-
 
                 $data = [
                     'lang' =>  $request->lang,
@@ -224,7 +223,6 @@ class ContentManagersController extends Controller
                     'title_2' => $request->input('title_2'),
                     'data' =>  $request->input('content')
                 ];
-
 
                 $our_projects = Project::create($data);
 
@@ -247,9 +245,6 @@ class ContentManagersController extends Controller
 
             }
 
-
-
-
             if ($request->hasFile('image') &&  !empty($our_projects['id']) )
             {
 
@@ -264,9 +259,44 @@ class ContentManagersController extends Controller
             }
 
 
-
-
             return redirect()->back()->with('success','Our Projects has been updated successfully');
+
+        }
+        elseif($request->page === "contact-us")
+        {
+
+
+            if ($request->hasFile('image'))
+            {
+
+                $name = "website_logo.png";
+
+                $filePath = '/public/images/'.$name;
+
+                Storage::put($filePath, file_get_contents($request->file('image')));
+
+            }
+
+
+            $temp_content = [
+                'title' => $request->input('title'),
+                'content' =>  $request->input('content'),
+                'image' => $name??$request->input('default_image'),
+            ];
+
+            $data = [
+                'lang' =>  $request->lang,
+                'data' =>   json_encode($temp_content),
+                'page' => 'contact-us'
+            ];
+
+
+            $contact_us = ContentManager::find($id);
+
+            $contact_us->update($data);
+
+
+            return redirect()->back()->with('success','Contact Us Footer has been updated successfully');
 
         }
 
@@ -277,7 +307,6 @@ class ContentManagersController extends Controller
 
 
     }
-
 
 
 

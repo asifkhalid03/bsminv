@@ -24,7 +24,7 @@ Route::group(['prefix' => ''],function(){
 
     Route::get('en', function () {
          $lang = 'eng';
-          return view('index_en',compact('lang'));
+          return view('en_index',compact('lang'));
       })->name('index.en');
 
     Route::group(['prefix' => 'manage'],function(){
@@ -32,6 +32,7 @@ Route::group(['prefix' => ''],function(){
         Route::get('company-profile/{lang?}',[ContentManagersController::class,'CompanyProfile'])->name('manage.company-profile');
         Route::get('business-overview/{lang?}',[ContentManagersController::class,'BusinessOverview'])->name('manage.business.overview');
         Route::get('our-operations/{lang?}',[ContentManagersController::class,'OurOperations'])->name('manage.our.operations');
+        Route::get('contact-us/{lang?}',[ContentManagersController::class,'ContactUs'])->name('manage.contact.us');
         Route::get('our-project/{lang?}/{id?}',[ContentManagersController::class,'OurProject'])->name('manage.our.project');
         Route::get('our-project-deleted/{id}',[ContentManagersController::class,'OurProjectDeleted'])->name('manage.our.project.deleted');
 

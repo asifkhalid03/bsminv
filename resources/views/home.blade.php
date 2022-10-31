@@ -17,7 +17,7 @@
                                     <li><a href="{{route('manage.business.overview')}}">Business Overview</a></li>
                                     <li><a href="{{route('manage.our.operations')}}">Our Operation</a></li>
                                     <li><a href="{{route('manage.our.project')}}">Our Project</a></li>
-                                    <li><a href="#">Contact Us</a></li>
+                                    <li><a href="{{route('manage.contact.us')}}">Contact Us</a></li>
                                 </ul>
                             </li>
                         </ul>

@@ -38,7 +38,7 @@
 
     ?>
 
-    <h2>Company Profile Manage</h2>
+    <h2>Business Overview Manage</h2>
 
     <form action="{{route('manage.updated',$business_overview->id)}}" method="post"  enctype="multipart/form-data">
 
@@ -117,7 +117,7 @@
             <input type="file" class="form-control" name="image_1" id="image">
 
         </div>
-        
+
         <input type="hidden" name="default_image_1" value="{{$data->image_1 ?? ""}}">
 
         <div class="form-group col-lg-6">

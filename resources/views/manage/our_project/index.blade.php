@@ -49,7 +49,7 @@
 
             <div style="float: right">
                 @if(!empty($edit_project))
-                <a  href="/manage/our-project/en/0" class="btn btn-warning"> <i class="fa fa-home"> </i> Create</a>
+                <a  href="/manage/our-project/eng/0" class="btn btn-warning"> <i class="fa fa-home"> </i> Create</a>
                 @endif
                 <a  href="/home" class="btn btn-primary"> <i class="fa fa-home"> </i> Home</a>
 
@@ -57,17 +57,19 @@
 
         </div>
 
-        <div class="form-group" style="visibility:hidden">
-            <label for="lang">Language:</label>
-            <select class="form-control" name="lang" id="lang" onchange="ChangeLanguage(this.id)">
-                <option value="eng"> English</option>
-                <option value="chi"> Chinese </option>
 
-            </select>
-        </div>
 
 
         <div id="clonedInput1" class="clonedInput col-lg-12" style="border: 1px solid ; margin-top: 5px">
+
+            <div class="form-group" >
+                <label for="lang">Language:</label>
+                <select class="form-control" name="lang">
+                    <option {{ !empty($edit_project->lang) && $edit_project->lang === "eng" ? "selected" : ""}} value="eng"> English</option>
+                    <option {{ !empty($edit_project->lang) && $edit_project->lang === "chi" ? "selected" : ""}} value="chi"> Chinese </option>
+
+                </select>
+            </div>
 
                 <div class="actions" style="float: right; margin-bottom: 5px">
                     <button type="button" onclick="AppendProjects()" class="add-more btn btn-primary">Add More</button>
@@ -118,6 +120,7 @@
 
                     <th>#</th>
                     <th>Title</th>
+                    <th>Lang</th>
                     <th>Action</th>
                 </tr>
 
@@ -131,9 +134,10 @@
                 <tr>
                     <td>{{$counter++}}</td>
                     <td>{{$list->title}} / {{$list->title_2}} </td>
+                    <td>{{ucwords($list->lang)}} </td>
                     <td>
 
-                        <a href="{{route('manage.our.project',['lang'=>'en','id'=>$list->id])}}"> <i class="fa fa-edit"></i> </a>
+                        <a href="{{route('manage.our.project',['lang'=>'eng','id'=>$list->id])}}"> <i class="fa fa-edit"></i> </a>
 
                         &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
 
