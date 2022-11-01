@@ -35,7 +35,15 @@
                         </div>
                     @endif
 
-                    {{ __('You are logged in!') }}
+
+
+                        <a style="margin: 15px" class="btn btn-primary" href="{{route('manage.company-profile')}}"> Manage Company Profile</a>
+                        <a style="margin: 15px" class="btn btn-primary" href="{{route('manage.business.overview')}}"> Manage Business Overview</a>
+                        <a style="margin: 15px" class="btn btn-primary" href="{{route('manage.our.operations')}}"> Manage Our Operation</a>
+                        <a style="margin: 15px" class="btn btn-primary" href="{{route('manage.our.project')}}"> Manage Our Project</a>
+                        <a style="margin: 15px" class="btn btn-primary" href="{{route('manage.contact.us')}}"> Manage Contact Us</a>
+
+
                 </div>
             </div>
         </div>
