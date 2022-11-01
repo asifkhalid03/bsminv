@@ -23,4 +23,5 @@ Homestead.json
 .phpunit.result.cache
 composer.lock
 .idea/
-
+.htaccess
+public/.htaccess
