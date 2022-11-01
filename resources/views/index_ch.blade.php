@@ -176,7 +176,7 @@
   <li class="">
                         <a data-savepage-href="{{route('index.en')}}" href="{{route('index.en')}}" target="_self" data-gtm-category="Page Engagement" data-gtm-action="Navigation Click" data-gtm-label="Shareholders" style="
     color: blue;
-"><img src="https://bsminv.com/assets/images/usa.png" alt="USA" width="500" height="25"></a>
+"><img src="https://bsminv.com/bsminv_template/assets/images/usa.png" alt="USA" width="500" height="25"></a>
                     </li>
 
                 </ul>
@@ -191,7 +191,7 @@
     <div class="navHelper"></div>
 
 
-    <div class="page-header-section Homepage back-tint-40 background-position-center bx-header-desktop header-one-mobile" style="background-image: /*savepage-url=/images/dH7Z5frT2GQEAeyK__original.png*/ var(--savepage-url-16); min-height: 563px;">
+    <div class="page-header-section Homepage back-tint-40 background-position-center bx-header-desktop header-one-mobile" style="background-image: url('{{asset('bsminv_template/assets/images/AeCLz4fTU23f1.png')}}'); min-height: 563px;">
         <div class="container page-header-text home-header" style="margin-top: 2%">
 
             <h1 class="big-header">{{CompanyProfile($lang)->title[0] ?? ''}}</h1>
