@@ -102,7 +102,7 @@
 
         </div>
 
-        <div class="form-group">
+        <div style="display: none"  class="form-group">
             <label for="title">Title 3:</label>
             <input type="text" class="form-control" id="title"  name="title[]" value="{{$data->title[2] ?? ""}}">
         </div>
