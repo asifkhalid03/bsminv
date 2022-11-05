@@ -78,9 +78,26 @@ class ContentManagersController extends Controller
 
         $our_projects = Project::get();
 
+        $eng_title = DB::table('content_managers')->where('page','our-project')->where('lang','eng')->select('data')->value('data');
+        $chi_title = DB::table('content_managers')->where('page','our-project')->where('lang','chi')->select('data')->value('data');
+
+        $titles = [
+            'eng_title'=>$eng_title,
+            'chi_title'=>$chi_title
+        ];
+
         $page = "our-project";
 
-        return view('manage.our_project.index',compact('our_projects','page','lang','edit_project'));
+        return view('manage.our_project.index',compact('our_projects','page','lang','edit_project','titles'));
+
+    }
+
+    public function OurProjectTitle(Request  $request)
+    {
+        DB::table('content_managers')->where('page','our-project')->where('lang','eng')->update(['data'=>$request->eng_title]);
+        DB::table('content_managers')->where('page','our-project')->where('lang','chi')->update(['data'=>$request->chi_title]);
+
+        return redirect()->back();
 
     }
 

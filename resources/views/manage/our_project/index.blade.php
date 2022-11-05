@@ -109,27 +109,55 @@
 
         </div>
 
-        <div class="form-group col-lg-12" style="margin-top: 10px">
-
-            <h1>List of exits Projects</h1>
-            <table class="table table-striped" style="border-top: 1px solid">
 
 
-
-                <tr>
-
-                    <th>#</th>
-                    <th>Title</th>
-                    <th>Lang</th>
-                    <th>Action</th>
-                </tr>
+    </form>
 
 
-                <tbody>
 
-                @php($counter = 1)
+    <div class="form-group col-lg-12" style="margin-top: 10px">
 
-                @foreach($our_projects as $list)
+        <form method="post" action="{{route("manage.our.project.title")}}" >
+
+            @csrf
+        <div class="form-group" style="margin-top: 20px">
+            <label for="lang">Eng Title:</label>
+            <input  class="form-control" type="text" name="eng_title" value="{{$titles['eng_title']}}">
+        </div>
+
+        <div class="form-group" >
+            <label for="lang">CHI Title:</label>
+            <input class="form-control" type="text" name="chi_title" value="{{$titles['chi_title']}}">
+        </div>
+
+            <div class="form-group" >
+                <button type="submit" class="btn btn-primary">Update</button>
+            </div>
+
+
+        </form>
+
+
+
+        <h1>List of exits Projects</h1>
+        <table class="table table-striped" style="border-top: 1px solid">
+
+
+
+            <tr>
+
+                <th>#</th>
+                <th>Title</th>
+                <th>Lang</th>
+                <th>Action</th>
+            </tr>
+
+
+            <tbody>
+
+            @php($counter = 1)
+
+            @foreach($our_projects as $list)
 
                 <tr>
                     <td>{{$counter++}}</td>
@@ -146,15 +174,13 @@
                     </td>
                 </tr>
 
-                @endforeach
+            @endforeach
 
-                </tbody>
+            </tbody>
 
-            </table>
+        </table>
 
-        </div>
-
-
+    </div>
 
 
 
@@ -163,7 +189,7 @@
 
 
 
-    </form>
+
 
 @endsection
 

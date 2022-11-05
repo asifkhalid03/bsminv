@@ -434,13 +434,13 @@
             <div class="bx-title-and-paragraph-section center">
                 <h2 class="bx-title-and-paragraph-section-title bx-title-bottom-spacing">我们的项目</h2>
                 <h5 class="bx-section-paragraph paragraph-width bx-paragraph-top-spacing ">
-                    我们参与的酒店项目、办公室楼项目，以及我们计划中的项目。</h5>
+                    {{OurProject()['chi_title']}}  </h5>
             </div>
         </div>
         ﻿﻿<div class="mainPortfolioContainer">
         <div class="portfolioItems row">
 
-            @foreach(OurProject($lang) as $list)
+            @foreach(OurProject($lang)[0] as $list)
 
                 <div class="col-md-4 col-sm-12 bx-portfolio-item top-row-portfolio-item" style="min-height: 479px;">
                     <div class="bxPortfolioContainer">

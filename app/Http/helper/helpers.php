@@ -71,7 +71,17 @@ use App\Models\User;
 
     function OurProject($lang = "eng")
     {
-        return  Project::where('lang', $lang)->get()??[];
+        $eng_title = DB::table('content_managers')->where('page','our-project')->where('lang','eng')->select('data')->value('data');
+        $chi_title = DB::table('content_managers')->where('page','our-project')->where('lang','chi')->select('data')->value('data');
+
+        $data = [
+            'eng_title'=>$eng_title,
+            'chi_title'=>$chi_title
+        ];
+
+        $data[] =  Project::where('lang', $lang)->get()??[];
+
+        return $data;
 
     }
 

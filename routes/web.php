@@ -36,6 +36,7 @@ Route::group(['prefix' => ''],function(){
         Route::get('contact-us/{lang?}',[ContentManagersController::class,'ContactUs'])->name('manage.contact.us');
         Route::get('our-project/{lang?}/{id?}',[ContentManagersController::class,'OurProject'])->name('manage.our.project');
         Route::get('our-project-deleted/{id}',[ContentManagersController::class,'OurProjectDeleted'])->name('manage.our.project.deleted');
+        Route::post('our-project-title',[ContentManagersController::class,'OurProjectTitle'])->name('manage.our.project.title');
 
         Route::post('{id?}/updated',[ContentManagersController::class,'Updated'])->name('manage.updated');
 

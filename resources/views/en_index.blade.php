@@ -430,15 +430,15 @@
                 <h2 class="bx-title-and-paragraph-section-title bx-title-bottom-spacing">Our
                     Project</h2>
                 <h5 class="bx-section-paragraph paragraph-width bx-paragraph-top-spacing ">
-                    We are involved in Hotels projects, Office Building projects, and Long Term Care Facility. </h5>
+                   {{OurProject()['eng_title']}} </h5>
             </div>
         </div>
         ﻿﻿<div class="mainPortfolioContainer">
         <div class="portfolioItems row">
 
-            @foreach(OurProject() as $list)
+            @foreach(OurProject()[0] as $list)
 
-            <div class="col-md-4 col-sm-12 bx-portfolio-item top-row-portfolio-item" style="min-height: 479px;">
+            <div class="col-md-4 col-sm-12 bx-portfolio-item top-row-portfolio-item" style="min-height: 479px; max-width: 1200px;">
                 <div class="bxPortfolioContainer">
                     <!--下面的url(/images/20201106174231.png)就是我们的项目里面的图片，也可以在这里找图片名字-->
                     <div class="portfolioThumbnail" style="background-image: linear-gradient(rgba(0,0,0,0.15),rgba(0,0,0,0.15));background-size:cover;">
