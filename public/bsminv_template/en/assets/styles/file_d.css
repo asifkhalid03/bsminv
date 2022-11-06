@@ -10437,7 +10437,7 @@ select#pressReleaseSelectElementId:focus {
 }
 
 .portfolioThumbnail {
-    height: 240px;
+    height: unset !important;
     background-size: cover
 }
 

@@ -61,6 +61,15 @@
 <meta property="og:image" content="https://bsminv.com/assets/images/logo-200.jpg" />
 
 
+    <style>
+
+        @media only screen and (max-width: 991px) and (min-width: 430px)  {
+            .mkh-description {
+                /*margin-top: 300px !important;*/
+            }
+        }
+
+    </style>
 
 
 
@@ -436,26 +445,53 @@
         ﻿﻿<div class="mainPortfolioContainer">
         <div class="portfolioItems row">
 
+            @php($project_counter = 1)
             @foreach(OurProject()[0] as $list)
 
+            @if($project_counter===1 || $project_counter === 4  || $project_counter === 7  || $project_counter === 10  || $project_counter === 16 || $project_counter === 19 )
+                    <div style="display: inline-block">
+            @endif
+
+
+
+
             <div class="col-md-4 col-sm-12 bx-portfolio-item top-row-portfolio-item" style="min-height: 479px; max-width: 1200px;">
+
                 <div class="bxPortfolioContainer">
                     <!--下面的url(/images/20201106174231.png)就是我们的项目里面的图片，也可以在这里找图片名字-->
                     <div class="portfolioThumbnail" style="background-image: linear-gradient(rgba(0,0,0,0.15),rgba(0,0,0,0.15));background-size:cover;">
                         <img src="{{asset('storage/images/projects')}}/{{$list->image}}" >
-
                     </div>
                 </div>
+
+                <div class="mkh-description">
+
                 <h6 id="portfolioEyebrow">
                     {!! $list->title !!}
                 </h6>
+
                 <h4 id="portfolioTitle">
                     {!! $list->title_2 !!}
                 </h4>
                 <div id="portfolioSummary">
-                    {!! $list->data!!}  </div>
+                    {!! $list->data!!}
+                </div>
+
+                </div>
+
             </div>
 
+
+
+            @if($project_counter === 3  || $project_counter === 6  || $project_counter === 9  || $project_counter === 15 || $project_counter === 18)
+
+            </div>
+
+            @endif
+
+
+
+            @php($project_counter++)
 
             @endforeach
 
