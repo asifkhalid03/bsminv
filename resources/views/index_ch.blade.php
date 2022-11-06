@@ -372,7 +372,7 @@
                     <img src="{{asset('storage/images')}}/{{OurOperations($lang)->image_1??""}}"  width="100%" height="1600px">
                 </div>
                 <div class="col-md-5 col-md-pull-7 overview-text-container" data-sf-element="Overview-Text-Container" data-placeholder-label="Overview Text Container">
-                    <div class="text-col-container overview-same-height" style="min-height: 1658px;">
+                    <div class="text-col-container overview-same-height" style="/*min-height: 1658px;*/">
                         <div class="overview-section-text" data-sf-element="Overview-Section-Text" data-placeholder-label="Overview Section Text">
                             <h4 id=" " class="sf_colsIn overview-section-title no-margin-top overview-title-1" data-sf-element="H4-text" data-placeholder-label="H4 Title">
                                 <div>
